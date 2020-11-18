@@ -1,0 +1,143 @@
+@charset "UTF-8";
+// 存放基础样式
+//侧边栏高度60000；顶部底部按钮高度50000；过滤窗口高度1000，子路由100
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 625%;
+}
+
+body {
+  font-size: 0.16rem;
+  background-color: #fff;
+  line-height: 1.5;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+body, ul, ol, li, p, form, fieldset, table, td, img, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+select, input, img, select {
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+@media screen and (min-width: 320px) {
+  html {font-size: 312.5%;}
+}
+
+@media screen and (min-width: 480px) {
+  html {font-size: 468.75%;}
+}
+
+@media screen and (min-width: 640px) {
+  html {font-size: 625%;}
+}
+
+@media screen and (min-width: 760px) {
+  html {font-size: 742.1875%;}
+}
+
+@media screen and (min-width: 960px) {
+  html {font-size: 937.5%;}
+}
+#app, html, body {
+  height: 100%;
+}
+button{
+  border:none;
+  padding: 0;
+  background-color: #fff;
+}
+.bold{
+  font-weight:bold;
+}
+.center{
+  text-align: center;
+}
+.btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50000;
+  background-color: #fff;
+
+  .van-button {
+    width: 50%;
+
+    &:first-child {
+      border-right: 0;
+      border-radius: 0 0 0 0.08rem;
+    }
+
+    &:last-child {
+      border-radius: 0 0 0.08rem 0;
+    }
+  }
+}
+@mainBlue: #1e90ff;
+@subBlue: #47a0f0;
+.icon-blue {
+  color: @subBlue;
+  font-weight: bold;
+}
+.btn-blue{
+  background-color: @mainBlue;
+  color: white;
+}
+
+.delete-red {
+  color: #ff7070;
+}
+.t-right{
+  text-align: right;
+}
+.t-center{
+  text-align: center;
+}
+@height: 0.6rem; // top-bar高度
+@padding: 0.2rem;
+.top-bar-filter {
+  top: 0.8rem;
+  width: 100%;
+  height: @height;
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 @padding;
+  align-items: center;
+  z-index: 1000;
+}

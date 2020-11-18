@@ -1,0 +1,71 @@
+
+@height: 0.6rem; // top-bar高度
+@padding: 0.2rem;
+.order-wrap {
+  margin: 0.8rem 0;
+  width: 100%;
+
+  .add-products {
+    text-align: center;
+    width: 50%;
+    margin: 0.2rem auto;
+    padding: 0.16rem 0;
+    border: 2px solid #ccc;
+    background-color: lighten(#ccc, 40%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    & > * {
+      align-self: center
+    }
+  }
+
+  .van-cell-group {
+    margin: 0.3rem 0;
+  }
+
+  .pros-wrap {
+    .pro-block {
+
+      margin-top: 0.1rem;
+      border-top: 1px solid #f1f1f1;
+
+      & > * {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &:first-child {
+        border: none;
+      }
+
+      .pro-block_up {
+        .pro-name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+        .btn-delete {
+          color: red;
+        }
+      }
+
+      .pro-block_bottom {
+        & > * {
+          width: 25%;
+        }
+        & >*.single {
+          width: 100%;
+        }
+
+        .van-stepper {
+          width: 50%; // 至少50% 否则iPhone5尺寸放不下
+        }
+      }
+    }
+  }
+}
